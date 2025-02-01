@@ -1,5 +1,3 @@
-document.getElementById('tipo-ingresso').addEventListener('change', updateMaxQty);
-
 function comprar() {
     let tipoIngresso = document.getElementById('tipo-ingresso').value;
     let quantidade = parseInt(document.getElementById('qtd').value);
@@ -19,11 +17,4 @@ function comprar() {
 
     document.getElementById(`qtd-${tipoIngresso}`).innerText = novaQuantidade;
     alert('Compra realizada com sucesso!');
-}
-
-function updateMaxQty() {
-    let tipoIngresso = document.getElementById('tipo-ingresso').value;
-    let maxQty = parseInt(document.getElementById(`qtd-${tipoIngresso}`).innerText);
-
-    document.getElementById('qtd').max = maxQty;
 }
